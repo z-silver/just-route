@@ -1,3 +1,3 @@
 # Just Route
 
-A Ring router in a dozen lines of code.
+A Ring router in half a screen of code.
