@@ -1,11 +1,12 @@
 (ns just-route.core
-  (:require [clojure.string :as str]))
+  (:require
+    [clojure.string :as str]))
 
 (defn normalize-uri [uri]
   (-> uri
-      (str/replace #"/+" "/")
-      (str/replace #"/$" "")
-      (str/replace #"^$" "/")))
+    (str/replace #"/+" "/")
+    (str/replace #"/$" "")
+    (str/replace #"^$" "/")))
 
 (defn router [route-map]
   (fn [{:keys [uri request-method] :as req}]
